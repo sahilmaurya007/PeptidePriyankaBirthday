@@ -1,212 +1,100 @@
 <!doctype html>
-<html lang="en">
+<html lang="hi">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#100d2a">
-<meta name="description" content="A little birthday surprise for Dr. Priyanka Kushwaha — peptide scientist, brilliant friend, and a genuinely lovely human.">
-<title>Happy Birthday, Priyanka! ✨</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#14082e"><meta name="description" content="A little chemistry-inspired surprise is waiting behind the code.">
+<title>A Little Reaction Is Brewing ✨</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--night:#100d2a;--plum:#241444;--pink:#ff78ad;--lilac:#c9b8ff;--gold:#ffd77a;--ice:#e9f5ff;--mint:#8ef0d2;--paper:#fffaf4}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:24px}
-body{margin:0;min-height:100vh;color:var(--paper);font:400 16px/1.7 "DM Sans",sans-serif;background:radial-gradient(ellipse at 15% 12%,#4a276d 0,transparent 34%),radial-gradient(ellipse at 90% 55%,#34235e 0,transparent 38%),linear-gradient(145deg,#100d2a,#1c1036 58%,#24113c);overflow-x:hidden}
-body.lock{overflow:hidden}
-canvas{position:fixed;inset:0;width:100%;height:100%;pointer-events:none}
-#chem{z-index:0;opacity:.58}#fireworks{z-index:8}
-button{font:inherit}
-#gate{position:fixed;inset:0;z-index:10;display:grid;place-items:center;padding:24px;background:rgba(12,8,30,.82);backdrop-filter:blur(16px);text-align:center;transition:opacity .9s,visibility .9s}
-#gate.closed{opacity:0;visibility:hidden;pointer-events:none}
-.gate-inner{width:min(100%,620px);padding:clamp(26px,6vw,54px);border:1px solid #ffffff2b;border-radius:32px;background:linear-gradient(145deg,#ffffff12,#ffffff06);box-shadow:0 30px 100px #0005}
-.flask{width:100px;height:120px;filter:drop-shadow(0 0 24px #ff78ad66);margin-bottom:8px}
-.eyebrow{font:700 22px Caveat,cursive;color:var(--gold);margin:0 0 10px}
-h1,h2,p{margin-top:0}
-.gate-title{font:800 clamp(34px,7vw,58px)/1.05 "Playfair Display",serif;margin:0 auto 14px;max-width:520px}
-.gate-copy{color:#e7dff5;margin:0 auto 18px}
-.countdown{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;max-width:440px;margin:22px auto 26px}
-.time-unit{padding:14px 5px 11px;border:1px solid #ffffff25;border-radius:17px;background:#ffffff0d}
-.time-unit b{display:block;font:700 clamp(25px,6vw,38px)/1 "DM Sans",sans-serif;color:var(--gold);font-variant-numeric:tabular-nums}
-.time-unit span{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#e7dff5}
-.primary{border:0;border-radius:100px;padding:15px 27px;color:#241334;background:linear-gradient(105deg,var(--gold),#ff9fc6 52%,var(--lilac));font-weight:700;font-size:17px;box-shadow:0 10px 34px #ff78ad45;cursor:pointer;transition:transform .2s,box-shadow .2s}
-.primary:hover{transform:translateY(-3px);box-shadow:0 14px 40px #ff78ad70}
-.primary:focus-visible,.sound:focus-visible{outline:3px solid var(--mint);outline-offset:4px}
-.tiny-note{font-size:13px;color:#cfc3e6;margin:17px 0 0}
-main{position:relative;z-index:1;width:min(1120px,100% - 36px);margin:auto;padding-bottom:100px}
-.hero{min-height:92svh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:80px 0 55px}
-.welcome{font:700 clamp(23px,4vw,32px) Caveat,cursive;color:var(--gold);margin:0 0 12px}
-.hero h1{font:800 clamp(55px,13vw,132px)/.92 "Playfair Display",serif;letter-spacing:-.055em;margin:0;color:#fff8f3;text-shadow:0 8px 50px #ff78ad2b}
-.hero h1 span{display:block;background:linear-gradient(95deg,#fff1c8,#ff9ec5 48%,#cdbdff);background-clip:text;color:transparent}
-.hero-name{font:700 clamp(32px,7vw,58px) Caveat,cursive;color:var(--gold);margin:17px 0 5px}
-.hero-sub{max-width:620px;color:#e4d9f4;font-size:clamp(16px,2.5vw,19px);margin:8px auto 18px}
-.date-pill{border:1px solid #ffffff30;border-radius:99px;padding:8px 17px;color:#f5e9ff;background:#ffffff0c;font-size:14px}
-.scroll-cue{margin-top:35px;color:#d7c9eb;font-size:13px;letter-spacing:.08em}
-.section{margin:50px auto 0}
-.section-heading{text-align:center;font:700 clamp(29px,5vw,44px)/1.15 "Playfair Display",serif;margin:0 0 14px}
-.section-intro{text-align:center;max-width:650px;color:#d9cde9;margin:0 auto 28px}
-.panel{padding:clamp(23px,4vw,42px);border:1px solid #ffffff24;border-radius:28px;background:linear-gradient(145deg,#ffffff12,#ffffff07);box-shadow:0 22px 70px #09051c35;backdrop-filter:blur(8px)}
-.report-title{text-align:center;font:700 clamp(25px,4vw,34px) "Playfair Display",serif;margin:0 0 12px}
-.report-lede{text-align:center;color:#e5d9f2;max-width:690px;margin:0 auto 24px}
-.quality-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.quality{padding:17px 15px;border-radius:17px;background:#ffffff0b;border:1px solid #ffffff18}
-.quality b{display:block;color:var(--mint);font-size:14px;margin-bottom:4px}
-.quality span{font-size:14px;color:#f3eaf9}
-.peptide{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:7px;margin:22px auto 0}
-.peptide span{width:39px;height:39px;display:grid;place-items:center;border-radius:50%;color:#25163a;font-weight:700;box-shadow:0 5px 20px #0002}
-.peptide small{font-size:10px;color:#f3eaf9}
-.gallery{columns:3 230px;column-gap:18px}
-.photo{break-inside:avoid;margin:0 0 20px;padding:10px 10px 8px;background:var(--paper);border-radius:7px;box-shadow:0 18px 45px #0005;transform:rotate(var(--tilt));transition:transform .35s,box-shadow .35s;opacity:0}
-.photo.visible{animation:photo-in .75s cubic-bezier(.2,1.3,.4,1) forwards}
-.photo:hover{transform:rotate(0) translateY(-5px);box-shadow:0 22px 55px #0007}
-.photo img{display:block;width:100%;height:auto;max-height:480px;object-fit:cover;border-radius:3px;background:#eee}
-.photo figcaption{font:700 21px/1.15 Caveat,cursive;text-align:center;color:#35204e;padding:9px 3px 2px}
-@keyframes photo-in{from{opacity:0;transform:translateY(28px) rotate(calc(var(--tilt)*2)) scale(.94)}to{opacity:1;transform:rotate(var(--tilt)) scale(1)}}
-.wish-panel{max-width:850px;margin-inline:auto}
-.wish-kicker{font:700 24px Caveat,cursive;color:var(--gold);text-align:center;margin-bottom:6px}
-.wish-copy{font:600 clamp(20px,3vw,25px)/1.65 Caveat,cursive;white-space:pre-line;color:#fff5fc;min-height:270px;margin:0}
-.signature{margin-top:22px;text-align:right;opacity:0;transform:translateY(8px);transition:.7s}
-.signature.show{opacity:1;transform:none}
-.signature span{display:block;color:#e8d9f4;font:600 20px Caveat,cursive}
-.signature strong{font:700 54px Caveat,cursive;color:var(--gold)}
-.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:26px}
-.secondary{background:#ffffff12;color:#fff;border:1px solid #ffffff35;box-shadow:none}
-footer{text-align:center;color:#c9b9dc;font-size:13px;margin:52px auto 0}
-.sound{position:fixed;right:18px;bottom:18px;z-index:9;width:48px;height:48px;border-radius:50%;border:1px solid #ffffff40;background:#1c1238dd;color:white;font-size:20px;cursor:pointer;display:none;backdrop-filter:blur(10px)}
-.toast{position:fixed;z-index:9;inset:0;display:grid;place-items:center;text-align:center;padding:24px;font:800 clamp(34px,8vw,76px)/1.08 "Playfair Display",serif;color:var(--gold);text-shadow:0 0 35px #ff78ad;opacity:0;pointer-events:none;transform:scale(.7);transition:.7s}
-.toast.show{opacity:1;transform:scale(1)}
-.reveal{opacity:0;transform:translateY(22px);transition:opacity .8s,transform .8s}
-.reveal.visible{opacity:1;transform:none}
-@media(max-width:650px){main{width:min(100% - 26px,1120px)}.hero{min-height:86svh}.quality-grid{grid-template-columns:1fr 1fr}.gallery{columns:2 145px;column-gap:12px}.photo{margin-bottom:14px;padding:7px 7px 6px}.photo figcaption{font-size:18px}.panel{border-radius:22px}.countdown{gap:6px}.time-unit{padding:12px 3px 9px}}
-@media(max-width:380px){.quality-grid{grid-template-columns:1fr}.countdown{gap:5px}.time-unit span{font-size:9px}}
+:root{color-scheme:dark;--ink:#14082e;--rose:#ff4f93;--gold:#ffc94d;--mint:#43f0c6;--lav:#b7a4ff;--cream:#fff6ec;--glass:#ffffff10}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:20px}body{margin:0;min-height:100vh;min-height:100dvh;overflow-x:hidden;color:var(--cream);font:400 17px/1.65 Fredoka,system-ui,sans-serif;background:radial-gradient(ellipse at 10% 0,#4a1a8a 0,transparent 42%),radial-gradient(ellipse at 95% 80%,#72245f 0,transparent 40%),var(--ink)}body.lock{overflow:hidden}button{font:inherit}canvas{position:fixed;inset:0;width:100%;height:100%;pointer-events:none}#chem{z-index:0;opacity:.52}#fx{z-index:8}
+#gate{position:fixed;inset:0;z-index:10;display:grid;place-items:center;padding:22px;overflow:auto;background:#14082edb;backdrop-filter:blur(12px);text-align:center;transition:opacity .9s,visibility .9s}#gate.out{opacity:0;visibility:hidden;pointer-events:none}.gatebox{width:min(100%,570px);padding:clamp(24px,6vw,48px);border:1px solid #ffffff30;border-radius:30px;background:linear-gradient(145deg,#ffffff14,#ffffff06);box-shadow:0 24px 90px #0006}.flask{width:112px;filter:drop-shadow(0 0 18px #ff4f9388)}.tag{font:600 22px Caveat,cursive;color:var(--gold);margin:5px 0}.gt{font-size:clamp(32px,7vw,54px);line-height:1.1;margin:10px auto}.gatecopy{color:#e4d9f3;margin:10px auto}.count{display:flex;justify-content:center;gap:9px;margin:22px 0}.unit{min-width:72px;padding:12px 6px;border:1px solid #ffffff2b;border-radius:16px;background:#ffffff0d}.unit b{display:block;font-size:clamp(27px,6vw,39px);line-height:1;color:var(--gold);font-variant-numeric:tabular-nums}.unit small{font-size:11px;color:#e6d9f4}.btn{border:0;border-radius:99px;padding:14px 26px;color:#2a0b4d;background:linear-gradient(100deg,var(--gold),var(--rose),var(--lav));font-weight:700;font-size:18px;box-shadow:0 8px 30px #ff4f9377;cursor:pointer;transition:transform .2s}.code-row{display:flex;justify-content:center;gap:9px;max-width:390px;margin:10px auto 0}.code-row input{min-width:0;width:190px;padding:12px 17px;border:1px solid #ffffff48;border-radius:99px;background:#160c31;color:#fff;text-align:center;font:600 19px Fredoka;letter-spacing:.22em;outline:none}.code-row input:focus{border-color:var(--mint);box-shadow:0 0 0 3px #43f0c633}.code-row input::placeholder{color:#bcaed0;letter-spacing:normal;font-size:15px}.code-submit{padding:12px 18px;font-size:16px}.btn:hover{transform:translateY(-2px) scale(1.02)}.btn:disabled{opacity:.58;cursor:not-allowed;filter:grayscale(.25);transform:none;box-shadow:none}.btn:focus-visible{outline:3px solid var(--mint);outline-offset:4px}.tiny{font-size:13px;color:#d2c5e2;margin:15px 0 0}
+.reaction{display:block;width:min(100%,520px);height:auto;margin:0 auto 7px;overflow:visible;filter:drop-shadow(0 8px 18px #6b4cff55);perspective:700px}.ring-molecule,.chain-molecule{transform-box:fill-box;transform-origin:center;animation:mol-float 3.2s ease-in-out infinite alternate}.chain-molecule{animation-delay:-1.2s}.atom{transform-box:fill-box;transform-origin:center;animation:atom-pulse 1.8s ease-in-out infinite alternate}.atom:nth-of-type(2n){animation-delay:-.7s}.electron{animation:electron-run 2.4s linear infinite}.bubble{animation:float-bubble 2.4s ease-in-out infinite alternate}.bubble.delay{animation-delay:-1.2s}@keyframes mol-float{from{transform:rotateY(-12deg) rotateX(7deg) translateY(3px)}to{transform:rotateY(12deg) rotateX(-7deg) translateY(-4px)}}@keyframes atom-pulse{to{filter:brightness(1.45);transform:scale(1.13)}}@keyframes electron-run{0%{transform:translateX(0);opacity:.2}50%{opacity:1}100%{transform:translateX(37px);opacity:.2}}@keyframes float-bubble{to{transform:translateY(-15px);opacity:.2}}main{position:relative;z-index:1;width:min(1020px,calc(100% - 32px));margin:auto;padding-bottom:80px}.hero{min-height:95svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:48px 0}.welcome{font:700 clamp(24px,5vw,34px) Caveat,cursive;color:var(--gold);margin:0 0 8px}.hero h1{margin:0;color:#fff8f3;font-size:clamp(58px,15vw,142px);line-height:.91;letter-spacing:-.04em;text-shadow:0 0 38px #ff4f933d}.hero h1 span{display:block;color:#ff9fcb}.name{font:700 clamp(34px,8vw,58px) Caveat,cursive;color:var(--gold);margin:16px 0 0}.intro{max-width:640px;color:#e8ddf4;font-size:clamp(16px,3vw,20px);margin:9px 0 18px}.pill{padding:7px 15px;border:1px solid #ffffff30;border-radius:99px;background:#ffffff0b;font-size:14px}.scroll{margin-top:32px;color:#dacde9;font-size:13px;animation:nod 1.5s ease-in-out infinite alternate}@keyframes nod{to{transform:translateY(5px)}}
+.section{margin:32px auto 56px}.panel{padding:clamp(22px,4vw,38px);border:1px solid #ffffff25;border-radius:26px;background:linear-gradient(140deg,#ffffff12,#ffffff06);backdrop-filter:blur(8px);box-shadow:0 20px 65px #0003}.heading{text-align:center;font-size:clamp(27px,5vw,40px);line-height:1.2;margin:0 0 12px}.lead{text-align:center;color:#e4d8f2;max-width:700px;margin:0 auto 24px}.qualities{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}.quality{padding:15px;border:1px solid #ffffff17;border-radius:16px;background:#ffffff09}.quality b{display:block;color:var(--mint);margin-bottom:3px}.quality span{font-size:14px;color:#f3eaf8}.letter-words{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:16px;margin:24px auto 10px}.letter-chain{position:relative;display:flex;gap:clamp(3px,1vw,8px)}.letter-chain:before{content:'';position:absolute;left:0;right:0;top:50%;height:3px;background:linear-gradient(90deg,#71bfff,#43f0c6,#71bfff);box-shadow:0 0 10px #43f0c688;z-index:0}.letter-chain span{position:relative;z-index:1;width:clamp(31px,4.8vw,42px);height:clamp(31px,4.8vw,42px);display:grid;place-items:center;border-radius:50%;background:var(--c);color:#281545;font-weight:700;box-shadow:0 4px 16px #0003;outline:2px solid #24163e}.peptide-caption{font-size:14px;margin:18px auto 8px}.poem-audio-note{text-align:center;color:#d7c8ed;font:600 18px Caveat,cursive;margin:20px 0 8px}.poem-audio{display:block;width:min(100%,560px);margin:0 auto 20px;filter:drop-shadow(0 6px 18px #0004)}.peptide-wrap{display:flex;align-items:center;justify-content:center;gap:13px;margin:10px auto 0}.peptide-tag{font:700 17px/1.05 Caveat,cursive;color:#a8e7ff;text-align:right;white-space:nowrap;text-shadow:0 0 12px #54baff88}.peptide-sequence{position:relative;display:flex;justify-content:center;gap:clamp(2px,1vw,8px);margin:0}.peptide-sequence:before{content:'';position:absolute;left:2%;right:2%;top:50%;height:3px;background:linear-gradient(90deg,#71bfff,#43f0c6,#71bfff);box-shadow:0 0 10px #43f0c688;z-index:0}.residue{position:relative;z-index:1;width:clamp(33px,5.8vw,46px);height:clamp(33px,5.8vw,46px);display:grid;place-items:center;border-radius:50%;background:var(--c);color:#281545;font-size:clamp(9px,1.5vw,12px);font-weight:700;box-shadow:0 4px 16px #0004;outline:2px solid #23143d}.video-box{max-width:520px;margin:22px auto 0;border:1px solid #ffffff30;border-radius:22px;overflow:hidden;background:#080d2a;box-shadow:0 20px 60px #0006}.video-box video{display:block;width:100%;height:auto;aspect-ratio:9/16;background:#080d2a}.video-note{text-align:center;color:#e4d8f2;font-size:14px;margin:14px auto 0}.gallery{columns:3 210px;column-gap:18px}.photo{break-inside:avoid;margin:0 0 18px;padding:9px 9px 5px;background:var(--cream);border-radius:6px;box-shadow:0 15px 35px #0006;transform:rotate(var(--r));opacity:0}.photo.visible{animation:arrive .7s cubic-bezier(.2,1.5,.4,1) forwards}.photo img{display:block;width:100%;height:auto;max-height:480px;object-fit:cover;border-radius:3px;background:#eee}.photo figcaption{font:600 21px/1.15 Caveat,cursive;color:#3a1a5e;text-align:center;padding:8px 3px 4px}@keyframes arrive{from{opacity:0;transform:rotate(calc(var(--r)*2)) translateY(35px) scale(.9)}to{opacity:1;transform:rotate(var(--r))}}
+.wish{max-width:820px;margin-inline:auto}.wishline{font:600 clamp(21px,4vw,28px)/1.55 Caveat,cursive;white-space:pre-line;min-height:240px;margin:0}.signature{display:none}.signature.show{opacity:1;transform:none}.signature span{font:600 22px Caveat,cursive}.signature b{display:block;font:700 68px/1 Caveat,cursive;color:var(--gold)}.actions{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:24px}footer{text-align:center;color:#cbbbdc;font-size:13px;margin:42px auto 0}.gallery-show{display:none;position:fixed;inset:0;z-index:7;place-items:center;padding:18px;background:rgba(11,7,30,.93);backdrop-filter:blur(12px);text-align:center}.gallery-show.open{display:grid}.show-inner{position:relative;width:min(100%,900px);height:min(94svh,1050px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}.show-image{max-width:100%;max-height:72svh;object-fit:contain;border:3px solid #86d8ff;border-radius:14px;box-shadow:0 0 34px #3ab6ff66,0 18px 65px #0009}.show-title{font:700 clamp(24px,5vw,36px) Fredoka,sans-serif;color:#a8e7ff;text-shadow:0 0 16px #5bb8ff;margin:5px 0}.show-quote{font:600 clamp(20px,4vw,27px) Caveat,cursive;color:#fff2bf;margin:0}.show-close{position:absolute;right:0;top:0;width:46px;height:46px;border:1px solid #ffffff55;border-radius:50%;background:#24123f;color:#fff;font-size:26px;cursor:pointer;z-index:2}.fall-flower{position:fixed;top:-50px;width:30px;height:30px;pointer-events:none;z-index:1;animation:flowerfall var(--dur) linear var(--delay) infinite;filter:drop-shadow(0 0 7px #ff9fc5)}.fall-flower i{position:absolute;left:10px;top:2px;width:10px;height:16px;border-radius:70% 70% 52% 52%;background:var(--petal);transform-origin:50% 14px;transform:rotate(var(--angle)) translateY(-5px)}.fall-flower:after{content:"";position:absolute;left:12px;top:12px;width:7px;height:7px;border-radius:50%;background:#ffe17b}@keyframes flowerfall{to{transform:translate3d(var(--drift),110vh,0) rotate(540deg)}}.toast{position:fixed;z-index:9;inset:0;display:grid;place-items:center;text-align:center;padding:20px;font-size:clamp(34px,9vw,78px);font-weight:700;color:var(--gold);text-shadow:0 0 30px var(--rose);opacity:0;pointer-events:none;transform:scale(.6);transition:.65s}.toast.on{opacity:1;transform:none}.reveal{opacity:0;transform:translateY(20px);transition:opacity .8s,transform .8s}.reveal.visible{opacity:1;transform:none}
+@media(max-width:640px){.qualities{grid-template-columns:1fr 1fr}.gallery{columns:2 140px;column-gap:12px}.photo{padding:7px;margin-bottom:13px}.photo figcaption{font-size:18px}.count{gap:5px}.unit{min-width:0;flex:1;padding:11px 3px}.unit small{font-size:10px}}@media(max-width:520px){.letter-words{flex-direction:column;gap:8px}.peptide-wrap{flex-direction:column;gap:5px}.peptide-tag{text-align:center;line-height:1.2}.peptide-tag br{display:none}}
+@media(max-width:370px){.qualities{grid-template-columns:1fr}.code-row{flex-direction:column;align-items:center}.code-row input,.code-submit{width:min(100%,260px)}.peptide-sequence{gap:2px}.residue{width:clamp(27px,8.4vw,31px);height:clamp(27px,8.4vw,31px);font-size:9px}}
+@media(max-height:850px){.gatebox{padding:20px}.flask{width:82px}.reaction{width:min(100%,420px)}.gt{font-size:clamp(30px,5vw,44px)}.count{margin:12px 0}.tiny{margin-top:9px}}@media(max-height:700px){#gate{align-items:start}.gatebox{margin:auto 0;padding:16px}.flask{width:64px}.reaction{width:min(100%,340px)}.tag{font-size:19px}.gt{font-size:clamp(28px,4.4vw,40px)}.count{margin:9px 0}}@media(max-width:600px){.gatebox{padding:20px 16px}.flask{width:78px}.reaction{width:min(100%,390px)}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.photo{opacity:1}}
 </style>
 </head>
 <body class="lock">
-<canvas id="chem" aria-hidden="true"></canvas><canvas id="fireworks" aria-hidden="true"></canvas>
-<div id="gate">
- <div class="gate-inner">
-  <svg class="flask" viewBox="0 0 100 120" role="img" aria-label="A bubbling chemistry flask">
-   <defs><clipPath id="flaskClip"><path d="M37 7h26v31l27 58q6 15-10 15H20q-16 0-10-15l27-58z"/></clipPath><linearGradient id="liquid" x2="0" y2="1"><stop stop-color="#ff8fba"/><stop offset="1" stop-color="#9275ff"/></linearGradient></defs>
-   <g clip-path="url(#flaskClip)"><path d="M5 69q20-10 45 0t45 0v52H5z" fill="url(#liquid)"/><g fill="#fff"><circle cx="35" cy="88" r="3"><animate attributeName="cy" values="88;48;88" dur="3s" repeatCount="indefinite"/></circle><circle cx="61" cy="96" r="2.5"><animate attributeName="cy" values="96;55;96" dur="2.4s" repeatCount="indefinite"/></circle></g></g>
-   <path d="M37 7h26v31l27 58q6 15-10 15H20q-16 0-10-15l27-58z" fill="none" stroke="#fff2ff" stroke-width="3" stroke-linejoin="round"/>
-  </svg>
-  <p class="eyebrow">A tiny lab-secret, prepared with extra love ✨</p>
-  <h1 class="gate-title" id="gateTitle">A birthday experiment is almost ready…</h1>
-  <p class="gate-copy" id="gateCopy">The countdown to Dr. Priyanka's special day (12 November, 12:00 AM IST):</p>
-  <div class="countdown" aria-label="Countdown to birthday">
-   <div class="time-unit"><b id="days">00</b><span>Days</span></div><div class="time-unit"><b id="hours">00</b><span>Hours</span></div><div class="time-unit"><b id="minutes">00</b><span>Minutes</span></div><div class="time-unit"><b id="seconds">00</b><span>Seconds</span></div>
-  </div>
-  <button class="primary" id="open">Open your surprise 🎁</button>
-  <p class="tiny-note">Sound is optional 🔊 · Tap anywhere after opening to send fireworks into the sky 🎆<br>Birthday countdown ends at midnight, Indian Standard Time.</p>
- </div>
-</div>
-<main id="main">
- <header class="hero">
-  <p class="welcome">A little celebration for a very special human</p>
-  <h1>Happy <span>Birthday</span></h1>
-  <p class="hero-name">Dr. Priyanka Kushwaha</p>
-  <p class="hero-sub">Peptide scientist by profession, sunshine by nature, and an all-round excellent human being. Today, the universe gets to celebrate you. 💜</p>
-  <span class="date-pill">12 November · 12:00 AM IST · Your day, your rules 🎂</span>
-  <p class="scroll-cue">A little more sparkle is waiting below ↓</p>
- </header>
- <section class="section panel reveal">
-  <h2 class="report-title">The Priyanka Appreciation Report 🧬</h2>
-  <p class="report-lede">After extensive (and completely peer-reviewed by me) observation, this is the official result of the world's most cheerful analysis.</p>
-  <div class="quality-grid">
-   <div class="quality"><b>Hardworking</b><span>Even deadlines need a break trying to keep up with you.</span></div>
-   <div class="quality"><b>Talented</b><span>Making complicated chemistry look like an everyday superpower.</span></div>
-   <div class="quality"><b>Humble</b><span>Big achievements, zero unnecessary attitude. Rare compound!</span></div>
-   <div class="quality"><b>Beautiful</b><span>That smile deserves its own journal impact factor.</span></div>
-   <div class="quality"><b>Adorably cute</b><span>Scientifically proven. No further experiments required.</span></div>
-   <div class="quality"><b>One of a kind</b><span>No known substitute. Definitely not commercially available.</span></div>
-  </div>
-  <div class="peptide" aria-label="A playful peptide sequence"><span style="background:#ffb0ce">P</span><span style="background:#ffd77a">R</span><span style="background:#b7c9ff">I</span><span style="background:#9be8d3">Y</span><span style="background:#e3b7ff">A</span><span style="background:#ffb0ce">N</span><span style="background:#ffd77a">K</span><span style="background:#b7c9ff">A</span></div>
-  <p style="text-align:center;color:#d8cbe9;font-size:13px;margin:12px 0 0">A tiny sequence-inspired tribute — not a real peptide sequence, just a scientist-approved birthday joke 😉</p>
- </section>
- <section class="section reveal">
-  <h2 class="section-heading">A little gallery of a lot of brilliance 📸</h2>
-  <p class="section-intro">Nine snapshots, countless reasons to smile. Each frame has earned its place in this very important birthday archive.</p>
-  <div class="gallery" id="gallery">
-   <figure class="photo" style="--tilt:-2deg"><img src="1stpic.png" alt="Priyanka smiling in a light outfit" loading="lazy"><figcaption>Certified cuteness, no lab required ✨</figcaption></figure>
-   <figure class="photo" style="--tilt:1.7deg"><img src="2nd.png" alt="Priyanka enjoying a train journey" loading="lazy"><figcaption>Main-character energy: fully activated 🚂</figcaption></figure>
-   <figure class="photo" style="--tilt:-1.3deg"><img src="3rd.png" alt="Priyanka standing by a chemistry blackboard" loading="lazy"><figcaption>When the scientist becomes the subject 🧪</figcaption></figure>
-   <figure class="photo" style="--tilt:2deg"><img src="4th.png" alt="Priyanka receiving an academic award" loading="lazy"><figcaption>Hard work looks good on you 🏅</figcaption></figure>
-   <figure class="photo" style="--tilt:-2.2deg"><img src="5th.png" alt="Priyanka holding her degree outdoors" loading="lazy"><figcaption>Achievement unlocked. Grace included 💫</figcaption></figure>
-   <figure class="photo" style="--tilt:1.4deg"><img src="6th.png" alt="Priyanka at an IIT Bombay convocation display" loading="lazy"><figcaption>A proud chapter, beautifully earned 🎓</figcaption></figure>
-   <figure class="photo" style="--tilt:-1.8deg"><img src="7th.png" alt="Priyanka in a blue saree" loading="lazy"><figcaption>Elegance with a capital E 💙</figcaption></figure>
-   <figure class="photo" style="--tilt:2.1deg"><img src="8th.png" alt="Priyanka taking a rest beside her laptop" loading="lazy"><figcaption>Even the brightest minds need a recharge 😴</figcaption></figure>
-   <figure class="photo" style="--tilt:-1.1deg"><img src="9th.png" alt="Priyanka smiling at her laptop" loading="lazy"><figcaption>Back to brilliance. As usual. 💻</figcaption></figure>
-  </div>
- </section>
- <section class="section panel wish-panel reveal" id="wish">
-  <p class="wish-kicker">One last note from your friend 💌</p>
-  <h2 class="section-heading">A wish, from the heart</h2>
-  <p class="wish-copy" id="wishText"></p>
-  <div class="signature" id="signature"><span>With lots of good wishes,</span><strong>Sahil</strong></div>
-  <div class="actions"><button class="primary" id="moreFireworks">One more round of fireworks! 🎆</button><button class="primary secondary" id="replay">Read the wish again ↻</button></div>
- </section>
- <footer>Made with friendship, peptide-inspired chemistry, a sky full of fireworks, and a frankly unreasonable amount of glitter. 💜</footer>
-</main>
-<div class="toast" id="toast">Happy Birthday,<br>Dr. Priyanka! 🎂</div>
-<button class="sound" id="sound" aria-label="Turn music off" title="Music on or off">🔊</button>
+<canvas id="chem" aria-hidden="true"></canvas><canvas id="fx" aria-hidden="true"></canvas>
+<div id="gate"><div class="gatebox">
+<svg class="flask" viewBox="0 0 120 150" aria-hidden="true"><defs><path id="fp" d="M48 8h24v4h-3v40l33 72q5 14-9 14H27q-14 0-9-14l33-72V12h-3z"/><clipPath id="fc"><use href="#fp"/></clipPath><linearGradient id="fg" x2="0" y2="1"><stop stop-color="#ff4f93"/><stop offset="1" stop-color="#7b4dff"/></linearGradient></defs><g clip-path="url(#fc)"><rect x="0" y="88" width="120" height="70" fill="url(#fg)"/><circle cx="50" cy="125" r="4" fill="white"><animate attributeName="cy" values="125;65;125" dur="2.4s" repeatCount="indefinite"/></circle><circle cx="68" cy="130" r="3" fill="white"><animate attributeName="cy" values="130;72;130" dur="2s" repeatCount="indefinite"/></circle></g><use href="#fp" fill="none" stroke="#fff6ec" stroke-width="3"/></svg>
+<svg class="reaction" viewBox="0 0 580 150" role="img" aria-label="Animated peptide chain reaction with colorful atoms">
+ <defs><linearGradient id="bond" x1="0" x2="1"><stop stop-color="#70bfff"/><stop offset=".52" stop-color="#43f0c6"/><stop offset="1" stop-color="#bd9aff"/></linearGradient><filter id="atomGlow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+ <g class="ring-molecule" filter="url(#atomGlow)"><path d="M52 72 73 36 115 36 136 72 115 108 73 108Z" fill="none" stroke="url(#bond)" stroke-width="8" stroke-linejoin="round"/><path d="M58 72 77 42M111 42 130 72M111 102 77 102" fill="none" stroke="#dcf8ff" stroke-opacity=".65" stroke-width="3"/><circle cx="52" cy="72" r="13" fill="#ff70a7"/><circle cx="73" cy="36" r="13" fill="#8fc6ff"/><circle cx="115" cy="36" r="13" fill="#ffc94d"/><circle cx="136" cy="72" r="13" fill="#43f0c6"/><circle cx="115" cy="108" r="13" fill="#b7a4ff"/><circle cx="73" cy="108" r="13" fill="#ff91c1"/></g>
+ <path d="M171 73H246M232 58l16 15-16 15" stroke="#b7a4ff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/><circle class="electron" cx="205" cy="73" r="5" fill="#fff6a3"/>
+ <g class="chain-molecule" filter="url(#atomGlow)"><path d="M285 75Q315 35 345 75T405 75T465 75T525 75" fill="none" stroke="url(#bond)" stroke-width="10" stroke-linecap="round"/><path d="M285 75Q315 35 345 75T405 75T465 75T525 75" fill="none" stroke="#ffffff" stroke-opacity=".38" stroke-width="3"/>
+ <circle class="atom" cx="285" cy="75" r="20" fill="#ff70a7"/><circle class="atom" cx="345" cy="75" r="20" fill="#77c6ff"/><circle class="atom" cx="405" cy="75" r="20" fill="#43f0c6"/><circle class="atom" cx="465" cy="75" r="20" fill="#ffc94d"/><circle class="atom" cx="525" cy="75" r="20" fill="#b7a4ff"/><text x="285" y="82" text-anchor="middle" fill="#251540" font-size="17" font-weight="700">C</text><text x="345" y="82" text-anchor="middle" fill="#251540" font-size="17" font-weight="700">N</text><text x="405" y="82" text-anchor="middle" fill="#251540" font-size="17" font-weight="700">O</text><text x="465" y="82" text-anchor="middle" fill="#251540" font-size="17" font-weight="700">C</text><text x="525" y="82" text-anchor="middle" fill="#251540" font-size="17" font-weight="700">N</text></g>
+ <circle class="bubble" cx="190" cy="35" r="4" fill="#ff78ad"/><circle class="bubble delay" cx="218" cy="112" r="5" fill="#43f0c6"/>
+</svg>
+<p class="tag">Secret chemistry experiment in progress 🧪</p><h1 class="gt" id="gateTitle">A little reaction is brewing</h1><p class="gatecopy" id="gateCopy">The reveal is getting closer:</p>
+<div class="count" aria-label="Countdown to reveal"><div class="unit"><b id="days">00</b><small>days</small></div><div class="unit"><b id="hours">00</b><small>hours</small></div><div class="unit"><b id="mins">00</b><small>minutes</small></div><div class="unit"><b id="secs">00</b><small>seconds</small></div></div>
+<label class="tag" for="unlockCode">Enter the secret code 🔐</label><div class="code-row"><input id="unlockCode" type="password" inputmode="numeric" maxlength="4" autocomplete="one-time-code" placeholder="4-digit code" aria-label="Four-digit surprise code"><button class="btn code-submit" id="checkCode" type="button">Unlock ✨</button></div><p id="codeMessage" class="tiny" aria-live="polite">Your secret code goes here.</p><button class="btn" id="open" disabled>Enter the code first 🔒</button><p class="tiny">The countdown ends at midnight IST.<br>Enter the code to reveal the secret; tap anywhere for fireworks 🎆<br>Code expires at 12:05 AM IST.</p>
+</div></div>
+<main>
+<header class="hero"><p class="welcome">A day to celebrate someone truly special ✨</p><h1>Happy<span>Birthday</span></h1><p class="name">Dr. Priyanka Kushwaha</p><p class="intro">Peptide scientist by profession, sunshine by nature, and a friend who makes every room brighter. Today, the universe gets to celebrate you. 💜</p><span class="pill">12 November · Your day, your rules 🎂</span><p class="scroll">Scroll for the rest of the surprise ↓</p></header>
+<section class="section panel reveal"><h2 class="heading">The Priyanka Appreciation Report 🧬</h2><p class="lead">After extensive (and extremely biased) peer review by me—and a frankly heroic amount of hard work—your official report is finally ready! 🧪📋 I expect generous co-author credit. 😌</p><div class="qualities"><div class="quality"><b>Hardworking 💪</b><span>Deadlines need a coffee break trying to keep up with you.</span></div><div class="quality"><b>Talented 🧪</b><span>Turning complex chemistry into an everyday superpower.</span></div><div class="quality"><b>Humble 🌸</b><span>Big achievements, zero ego. A rare compound!</span></div><div class="quality"><b>Beautiful 💖</b><span>That smile deserves its own journal impact factor.</span></div><div class="quality"><b>So cute 🧁</b><span>Scientifically proven. No further experiments required.</span></div><div class="quality"><b>One of a kind ✨</b><span>No known substitute; definitely not commercially available.</span></div></div><div class="letter-words" aria-label="Peptide Priyanka in connected circles"><div class="letter-chain"><span style="--c:#ff9fc5">P</span><span style="--c:#ffd77a">E</span><span style="--c:#b7c9ff">P</span><span style="--c:#8ef0d2">T</span><span style="--c:#e3b7ff">I</span><span style="--c:#ff9fc5">D</span><span style="--c:#ffd77a">E</span></div><div class="letter-chain"><span style="--c:#ff9fc5">P</span><span style="--c:#ffd77a">R</span><span style="--c:#b7c9ff">I</span><span style="--c:#8ef0d2">Y</span><span style="--c:#e3b7ff">A</span><span style="--c:#ff9fc5">N</span><span style="--c:#ffd77a">K</span><span style="--c:#b7c9ff">A</span></div></div><p class="lead peptide-caption">Her name, translated into a playful amino-acid sequence:</p><div class="peptide-wrap"><span class="peptide-tag">8-mer<br>peptide</span><div class="peptide-sequence" aria-label="Proline, arginine, isoleucine, tyrosine, alanine, asparagine, lysine, alanine"><span class="residue" style="--c:#ff9fc5">Pro</span><span class="residue" style="--c:#ffd77a">Arg</span><span class="residue" style="--c:#b7c9ff">Ile</span><span class="residue" style="--c:#8ef0d2">Tyr</span><span class="residue" style="--c:#e3b7ff">Ala</span><span class="residue" style="--c:#ff9fc5">Asn</span><span class="residue" style="--c:#ffd77a">Lys</span><span class="residue" style="--c:#b7c9ff">Ala</span></div></div></section>
+<section class="section panel reveal"><h2 class="heading">A little video surprise for you 🎬</h2><p class="lead">A twenty-second lab-to-fireworks celebration, made just for you.</p><div class="video-box"><video controls playsinline preload="metadata" aria-label="A birthday celebration video for Priyanka"><source src="Priyanka_Birthday_Sahil.mp4" type="video/mp4">Your browser does not support video playback.</video></div><p class="video-note">20 seconds · 9 full photos · chemistry, flower showers & fireworks ✨</p></section>
+<section class="section reveal"><h2 class="heading">Nine photos, countless reasons to smile 📸</h2><p class="lead">Nine lovely snapshots for the birthday archive.</p><div class="gallery" id="gallery"></div><div class="actions"><button class="btn" id="photoShow">Open the photo fireworks show! 🎆🌸</button></div></section>
+<section class="section panel wish reveal" id="wish"><p class="tag" style="text-align:center">A note from the heart 💌</p><h2 class="heading">A poem for you 🌸</h2><p class="wishline" id="wishText"></p><p class="poem-audio-note">Listen to the poem, read aloud line by line:</p><audio class="poem-audio" controls preload="metadata" aria-label="The birthday poem read aloud"><source src="Priyanka_Poem_Read_By_Sahil.mp3" type="audio/mpeg">Your browser does not support audio playback.</audio><div class="signature" id="signature"><span>Best wishes,</span><b>Sahil</b></div><div class="actions"><button class="btn" id="again">More fireworks! 🎆</button><button class="btn" id="replay">Read the poem again ↻</button></div></section>
+<footer>Made with friendship, peptide chemistry, a sky full of fireworks, and an unreasonable amount of glitter. 💜</footer>
+</main><div class="gallery-show" id="galleryShow" role="dialog" aria-modal="true" aria-label="Photos of Priyanka with fireworks"><div class="show-inner"><button class="show-close" id="showClose" aria-label="Close photo show">×</button><div class="show-title" id="showTitle"></div><img class="show-image" id="showImage" alt="Priyanka ki tasveer"><p class="show-quote" id="showQuote"></p><div id="flowerRain" aria-hidden="true"></div></div></div><div class="toast" id="toast">🎂 Happy Birthday,<br>Dr. Priyanka! 🎂</div>
 <script>
-(()=>{
- const $=id=>document.getElementById(id);
- const birthday=new Date('2026-11-12T00:00:00+05:30').getTime();
- const pad=n=>String(n).padStart(2,'0');
- let opened=false, audio=null, musicOn=false, musicTimer=null, wishStarted=false;
- function countdown(){
-  const left=Math.max(0,birthday-Date.now()),sec=Math.floor(left/1000);
-  $('days').textContent=pad(Math.floor(sec/86400));
-  $('hours').textContent=pad(Math.floor(sec%86400/3600));
-  $('minutes').textContent=pad(Math.floor(sec%3600/60));
-  $('seconds').textContent=pad(sec%60);
-  if(left===0){$('gateTitle').textContent='The wait is over. It is your day! 🎂';$('gateCopy').textContent='Your birthday surprise is ready whenever you are.'}
- }
- countdown();setInterval(countdown,1000);
- // Subtle drifting peptide-like bonds and molecular rings.
- const chem=$('chem'),ctx=chem.getContext('2d');let cw=0,ch=0,molecules=[];
- function resize(){const d=Math.min(devicePixelRatio||1,2);cw=innerWidth;ch=innerHeight;chem.width=cw*d;chem.height=ch*d;chem.style.width=cw+'px';chem.style.height=ch+'px';ctx.setTransform(d,0,0,d,0,0);molecules=Array.from({length:13},()=>({x:Math.random()*cw,y:Math.random()*ch,r:18+Math.random()*25,a:Math.random()*6.28,v:(Math.random()-.5)*.003,dx:(Math.random()-.5)*.18,dy:(Math.random()-.5)*.12,type:Math.random()>.5?0:1}))}
-  addEventListener('resize',resize);resize();
- function moleculeFrame(){ctx.clearRect(0,0,cw,ch);molecules.forEach(m=>{m.x+=m.dx;m.y+=m.dy;m.a+=m.v;if(m.x<-60)m.x=cw+60;if(m.x>cw+60)m.x=-60;if(m.y<-60)m.y=ch+60;if(m.y>ch+60)m.y=-60;ctx.save();ctx.translate(m.x,m.y);ctx.rotate(m.a);ctx.strokeStyle='rgba(201,184,255,.35)';ctx.lineWidth=1.3;ctx.beginPath();for(let i=0;i<6;i++){const a=i*Math.PI/3;const x=Math.cos(a)*m.r,y=Math.sin(a)*m.r;i?ctx.lineTo(x,y):ctx.moveTo(x,y)}ctx.closePath();ctx.stroke();for(let i=0;i<6;i++){const a=i*Math.PI/3;ctx.beginPath();ctx.fillStyle=['#ff9fc6','#8ef0d2','#ffd77a'][i%3];ctx.shadowColor=ctx.fillStyle;ctx.shadowBlur=10;ctx.arc(Math.cos(a)*m.r,Math.sin(a)*m.r,3.2,0,Math.PI*2);ctx.fill()}ctx.restore()});requestAnimationFrame(moleculeFrame)}
- moleculeFrame();
- // Firework rockets and particle bursts.
- const fx=$('fireworks'),f=fx.getContext('2d');let fw=0,fh=0,dpr=1,rockets=[],sparks=[];
- function sizeFx(){dpr=Math.min(devicePixelRatio||1,2);fw=innerWidth;fh=innerHeight;fx.width=fw*dpr;fx.height=fh*dpr;fx.style.width=fw+'px';fx.style.height=fh+'px';f.setTransform(dpr,0,0,dpr,0,0)}
- addEventListener('resize',sizeFx);sizeFx();
- const rand=(a,b)=>a+Math.random()*(b-a);
- function launch(x,y){x=x??rand(fw*.12,fw*.88);y=y??rand(fh*.12,fh*.48);const sx=x+rand(-fw*.18,fw*.18);const frames=rand(38,58);rockets.push({x:sx,y:fh+10,vx:(x-sx)/frames,vy:(y-fh)/frames,frames,age:0})}
- function burst(x,y){const hue=rand(0,360),count=rand(65,105);for(let i=0;i<count;i++){const a=Math.PI*2*i/count,s=rand(1.1,5.4);sparks.push({x,y,vx:Math.cos(a)*s,vy:Math.sin(a)*s,life:0,max:rand(48,85),color:'hsl('+rand(hue-35,hue+55)+' 100% '+rand(62,78)+'%)',size:rand(1.2,2.5)})}}
- function fireFrame(){f.globalCompositeOperation='destination-out';f.fillStyle='rgba(10,7,28,.2)';f.fillRect(0,0,fw,fh);f.globalCompositeOperation='lighter';for(let i=rockets.length-1;i>=0;i--){const r=rockets[i];r.x+=r.vx;r.y+=r.vy;if(++r.age>=r.frames){burst(r.x,r.y);rockets.splice(i,1)}else{f.fillStyle='#fff0c9';f.fillRect(r.x,r.y,2,5)}}for(let i=sparks.length-1;i>=0;i--){const p=sparks[i];p.x+=p.vx;p.y+=p.vy;p.vx*=.985;p.vy=p.vy*.985+.045;p.life++;if(p.life>p.max){sparks.splice(i,1);continue}f.globalAlpha=1-p.life/p.max;f.fillStyle=p.color;f.beginPath();f.arc(p.x,p.y,p.size,0,Math.PI*2);f.fill()}f.globalAlpha=1;requestAnimationFrame(fireFrame)}
- fireFrame();
- function celebrate(n=12){for(let i=0;i<n;i++)setTimeout(()=>launch(),i*170)}
- // Original, browser-synthesized birthday melody; starts only after the visitor taps.
- function startMusic(){try{const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return;audio=audio||new AC();audio.resume();musicOn=true;$('sound').textContent='🔊';$('sound').style.display='block';const notes=[392,392,440,392,523.25,493.88,392,392,440,392,587.33,523.25,392,392,783.99,659.25,523.25,493.88,440,698.46,698.46,659.25,523.25,587.33,523.25];let idx=0;const play=()=>{if(!musicOn||!audio)return;const now=audio.currentTime;const osc=audio.createOscillator(),gain=audio.createGain();osc.type='triangle';osc.frequency.value=notes[idx++%notes.length];gain.gain.setValueAtTime(.0001,now);gain.gain.exponentialRampToValueAtTime(.12,now+.025);gain.gain.exponentialRampToValueAtTime(.0001,now+.48);osc.connect(gain);gain.connect(audio.destination);osc.start(now);osc.stop(now+.5)};if(musicTimer)clearInterval(musicTimer);play();musicTimer=setInterval(play,440)}catch(e){console.info('Audio is unavailable in this browser.')}}
- function stopMusic(){musicOn=false;if(musicTimer)clearInterval(musicTimer);if(audio)audio.suspend();$('sound').textContent='🔇'}
- $('sound').addEventListener('click',()=>musicOn?stopMusic():startMusic());
- const wish=`Priyanka,
+(()=>{'use strict';const $=id=>document.getElementById(id),rand=(a,b)=>a+Math.random()*(b-a);const birthday=new Date('2026-11-12T00:00:00+05:30').getTime(),codeExpires=new Date('2026-11-12T00:05:00+05:30').getTime();let opened=false;
+function tick(){let n=Math.max(0,birthday-Date.now()),s=Math.floor(n/1000);$('days').textContent=String(Math.floor(s/86400)).padStart(2,'0');$('hours').textContent=String(Math.floor(s%86400/3600)).padStart(2,'0');$('mins').textContent=String(Math.floor(s%3600/60)).padStart(2,'0');$('secs').textContent=String(s%60).padStart(2,'0');if(!n){$('gateTitle').textContent='The wait is over — the reveal is ready! ✨';$('gateCopy').textContent='The secret is ready whenever you are.';if(!opened)setTimeout(()=>revealSurprise(true),0)}}tick();setInterval(tick,1000);
+const imageFiles=['1stpic.png','2nd.png','3rd.png','4th.png','5th.png','6th.png','7th.png','8th.png','9th.png'];const showTitles=['Effortlessly elegant','Main character energy','Chemistry queen','Achievement unlocked','Grace under pressure','Proud moment','Saree supremacy','Lab-approved nap','Brilliant, as always'];const showQuotes=['Even the flask is trying to look this composed.','A train ride with full red-carpet energy.','Board pe equations, frame mein perfection.','That medal knows it got lucky.','Degree in hand, humility still fully charged.','CV mein PhD; vibes mein Nobel.','Blue looks like it was invented for you.','Even your breaks are more photogenic than my best work.','Laptop open, world impressed, coffee jealous.'];const caps=['Certified cuteness, no lab required ✨','Main-character energy: activated 🚂','Scientist and star, all in one 🧪','Hard work, beautifully earned 🏅','Achievement unlocked, grace included 💫','Proud moment, fully deserved 🎓','Elegance with a capital E 💙','Brilliant minds need recharge breaks 😴','Back to brilliance. As usual 💻'];const gallery=$('gallery');for(let i=1;i<=9;i++){let fig=document.createElement('figure');fig.className='photo';fig.style.setProperty('--r',['-2deg','1.7deg','-1.3deg','2deg','-2.2deg','1.4deg','-1.8deg','2.1deg','-1.1deg'][i-1]);let img=document.createElement('img');img.src=imageFiles[i-1];img.alt=`Photo of Priyanka ${i}`;img.loading='lazy';let cap=document.createElement('figcaption');cap.textContent=caps[i-1];fig.append(img,cap);gallery.append(fig)}
+// Slowly drifting peptide-like molecular rings.
+const chem=$('chem'),ctx=chem.getContext('2d');let cw,ch,molecules=[];function resize(){let d=Math.min(devicePixelRatio||1,2);cw=innerWidth;ch=innerHeight;chem.width=cw*d;chem.height=ch*d;ctx.setTransform(d,0,0,d,0,0);molecules=Array.from({length:14},()=>({x:rand(0,cw),y:rand(0,ch),r:rand(16,30),a:rand(0,6.28),v:rand(-.003,.003),dx:rand(-.15,.15),dy:rand(-.12,.12)}))}addEventListener('resize',resize);resize();function moleculesFrame(){ctx.clearRect(0,0,cw,ch);for(let m of molecules){m.x+=m.dx;m.y+=m.dy;m.a+=m.v;if(m.x<-60)m.x=cw+50;if(m.x>cw+60)m.x=-50;if(m.y<-60)m.y=ch+50;if(m.y>ch+60)m.y=-50;ctx.save();ctx.translate(m.x,m.y);ctx.rotate(m.a);ctx.strokeStyle='rgba(255,255,255,.3)';ctx.lineWidth=1.3;ctx.beginPath();for(let i=0;i<6;i++){let a=i*Math.PI/3,x=Math.cos(a)*m.r,y=Math.sin(a)*m.r;i?ctx.lineTo(x,y):ctx.moveTo(x,y)}ctx.closePath();ctx.stroke();for(let i=0;i<6;i++){let a=i*Math.PI/3;ctx.fillStyle=['#ff6b9b','#6dafff','#43f0c6'][i%3];ctx.beginPath();ctx.arc(Math.cos(a)*m.r,Math.sin(a)*m.r,3.2,0,6.28);ctx.fill()}ctx.restore()}requestAnimationFrame(moleculesFrame)}moleculesFrame();
+// Colourful rising rockets and bursting sparks.
+const fx=$('fx'),c=fx.getContext('2d');let w,h,dpr=1,rockets=[],sparks=[];function size(){dpr=Math.min(devicePixelRatio||1,2);w=innerWidth;h=innerHeight;fx.width=w*dpr;fx.height=h*dpr;c.setTransform(dpr,0,0,dpr,0,0)}addEventListener('resize',size);size();function launch(x,y){x=x??rand(w*.12,w*.88);y=y??rand(h*.12,h*.48);let sx=x+rand(-w*.16,w*.16),frames=rand(40,62);rockets.push({x:sx,y:h+10,vx:(x-sx)/frames,vy:(y-h)/frames,frames,age:0})}function burst(x,y){let hue=rand(0,360),count=rand(75,120);for(let i=0;i<count;i++){let a=Math.PI*2*i/count,v=rand(1.2,5.8);sparks.push({x,y,vx:Math.cos(a)*v,vy:Math.sin(a)*v,age:0,max:rand(55,95),color:`hsl(${(hue+rand(-50,70)+360)%360} 100% ${rand(60,78)}%)`,r:rand(1.2,2.8)})}}function fireworks(){c.globalCompositeOperation='destination-out';c.fillStyle='rgba(20,8,46,.2)';c.fillRect(0,0,w,h);c.globalCompositeOperation='lighter';for(let i=rockets.length-1;i>=0;i--){let r=rockets[i];r.x+=r.vx;r.y+=r.vy;if(++r.age>=r.frames){burst(r.x,r.y);rockets.splice(i,1)}else{c.fillStyle='#fff0b5';c.fillRect(r.x,r.y,2,5)}}for(let i=sparks.length-1;i>=0;i--){let p=sparks[i];p.x+=p.vx;p.y+=p.vy;p.vx*=.985;p.vy=p.vy*.985+.045;p.age++;if(p.age>p.max){sparks.splice(i,1);continue}c.globalAlpha=1-p.age/p.max;c.fillStyle=p.color;c.beginPath();c.arc(p.x,p.y,p.r,0,6.28);c.fill()}c.globalAlpha=1;requestAnimationFrame(fireworks)}fireworks();function celebrate(n=12){for(let i=0;i<n;i++)setTimeout(()=>launch(),i*170)}
+function revealSurprise(automatic=false){if(opened)return;opened=true;if(!automatic){try{const fs=document.documentElement.requestFullscreen||document.documentElement.webkitRequestFullscreen;if(fs){const request=fs.call(document.documentElement);if(request&&request.catch)request.catch(()=>{})}}catch(e){}}document.body.classList.remove('lock');$('gate').classList.add('out');celebrate(20);$('toast').classList.add('on');setTimeout(()=>$('toast').classList.remove('on'),3700);setInterval(()=>{if(!document.hidden)launch()},2600)}
+function verifyCode(){const input=$('unlockCode');if(Date.now()>=birthday){revealSurprise(true);return}if(Date.now()>=codeExpires){$('codeMessage').textContent='This code expired at 12:05 AM IST.';$('codeMessage').style.color='#ff9fbb';$('open').disabled=true;return}if(input.value.trim()==='1993'){$('codeMessage').textContent='Code accepted — the surprise is unlocked! 💜';$('codeMessage').style.color='#8ef0d2';$('open').disabled=false;$('open').textContent='Open the surprise 🎁'}else{$('codeMessage').textContent='That code didn’t match. Please try again.';$('codeMessage').style.color='#ff9fbb';$('open').disabled=true}}$('checkCode').addEventListener('click',verifyCode);$('unlockCode').addEventListener('keydown',e=>{if(e.key==='Enter')verifyCode()});
+const wish=`🌸 तुम्हारे नाम एक नज़्म — प्रियंका के लिए
 
-Happy Birthday! 💜
+प्रियंका, तुम्हें जन्मदिन की ढेरों शुभकामनाएँ! 💜
 
-Aaj ke din tumhare liye bas ek hi instruction hai: laptop thoda side mein, cake thoda saamne, aur smile full brightness par! Lab ke experiments, research papers aur deadlines ko aaj officially chhutti milni chahiye. 🧪
+तेरी हँसी से रोशन रहें ज़िंदगी के तमाम रास्ते,
+तेरे हर ख़्वाब को मिलें आसमान, तेरे हौसलों को नए वास्ते।
 
-You are genuinely one of the most hardworking and talented people I know. The way you keep learning, keep growing and still stay so humble is honestly inspiring. You make hard work look graceful, and that is a rare combination. Aur haan, beautiful toh ho hi — lekin tumhari kindness aur that lovely smile make you even more special. Itni saari qualities ek hi person mein? Thoda unfair advantage hai, Dr. Priyanka! 😄
+तेरी मेहनत की खुशबू से महके हर एक मुक़ाम,
+तेरी simplicity में छिपा है एक खूबसूरत सा आयाम।
 
-I hope this new year brings you exciting discoveries, wonderful opportunities, good health, peaceful days, papers accepted without endless revisions, experiments that work on the first try, and countless reasons to feel proud of yourself.
+तू science की दुनिया में नए रंग भरती रहे,
+हर मुश्किल तेरे confidence के आगे झुकती रहे।
 
-Keep shining, keep being your wonderful self, and never forget to celebrate how far you have come. You deserve all the happiness, success and little surprises life can offer.
+तेरे talent की चमक से सितारे भी हैरान हों,
+तेरी achievements के हर तरफ़ नए अरमान हों।
 
-Have the happiest birthday. And please, aaj cake ke calories ka koi analysis mat karna — that's a problem for tomorrow. 🎂✨`;
- function typeWish(){if(wishStarted)return;wishStarted=true;const el=$('wishText');let i=0;function step(){el.textContent=wish.slice(0,i++);if(i<=wish.length)setTimeout(step,wish[i-1]==='\n'?180:17);else $('signature').classList.add('show')}step()}
- const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');if(entry.target.id==='wish')typeWish();observer.unobserve(entry.target)}}),{threshold:.14});
- document.querySelectorAll('.reveal,.photo').forEach(el=>observer.observe(el));
- $('open').addEventListener('click',()=>{if(opened)return;opened=true;document.body.classList.remove('lock');$('gate').classList.add('closed');startMusic();celebrate(18);setTimeout(()=>$('toast').classList.add('show'),450);setTimeout(()=>$('toast').classList.remove('show'),3600);setInterval(()=>{if(!document.hidden&&opened)launch()},2800);});
- $('moreFireworks').addEventListener('click',()=>celebrate(20));
- $('replay').addEventListener('click',()=>{wishStarted=false;$('wishText').textContent='';$('signature').classList.remove('show');typeWish();celebrate(4)});
- addEventListener('pointerdown',e=>{if(opened&&!e.target.closest('button'))launch(e.clientX,e.clientY)});
+तेरे हर research का कोई खूबसूरत result मिले,
+हर experiment में success, हर paper को acceptance मिले।
+
+कभी reviewers भी तेरी मेहनत को समझ पाएँ,
+बिना किसी revision के सारे papers छप जाएँ! 😄
+
+तेरी आँखों में हमेशा खुशियों के सपने रहें,
+तेरे हिस्से में सुकून और खूबसूरत पल रहें।
+
+तू यूँ ही मुस्कुराती रहना, यही wish है मेरी,
+तेरी हर सुबह रोशन हो, हर शाम सुनहरी।
+
+और हाँ, आज books और deadlines को थोड़ा आराम देना,
+Cake की मिठास में सारी फ़िक्रें भुला देना। 🎂
+
+तू special है, ये बात किसी तारीफ़ की मोहताज नहीं,
+तेरे जैसा होना भी कोई मामूली बात नहीं।
+
+जन्मदिन मुबारक हो प्यारी दोस्त, यूँ ही मुस्कुराती रहना, प्रियंका!
+Keep smiling, keep shining and keep being YOU! ✨
+
+With lots of wishes,
+Sahil`;;
+let typed=false;function typeWish(){if(typed)return;typed=true;let i=0;function step(){$('wishText').textContent=wish.slice(0,i++);if(i<=wish.length)setTimeout(step,wish[i-1]==='\n'?180:18);else $('signature').classList.add('show')}step()}let observer=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');if(e.target.id==='wish')typeWish();observer.unobserve(e.target)}}),{threshold:.14});document.querySelectorAll('.reveal,.photo').forEach(el=>observer.observe(el));
+const photoModal=$('galleryShow');let showTimer=null,showPos=0;function populateFlowers(){const rain=$('flowerRain');rain.textContent='';for(let i=0;i<22;i++){const f=document.createElement('span');f.className='fall-flower';f.style.left=rand(1,98)+'vw';f.style.setProperty('--dur',rand(2.4,5.5)+'s');f.style.setProperty('--delay',(-rand(0,5))+'s');f.style.setProperty('--drift',rand(-90,90)+'px');f.style.setProperty('--petal',['#ff6f9f','#fff0f5','#f8a9d3','#ffd5ed'][i%4]);f.innerHTML='<i style="--angle:0deg"></i><i style="--angle:72deg"></i><i style="--angle:144deg"></i><i style="--angle:216deg"></i><i style="--angle:288deg"></i>';rain.append(f)}}function showPhoto(){const im=$('showImage');im.src=imageFiles[showPos];im.alt='Photo of Priyanka';$('showTitle').textContent=showTitles[showPos];$('showQuote').textContent=showQuotes[showPos];for(let j=0;j<18;j++)setTimeout(()=>launch(),j*75)}function startPhotoShow(){clearInterval(showTimer);showPos=0;populateFlowers();photoModal.classList.add('open');showPhoto();showTimer=setInterval(()=>{showPos++;if(showPos>=imageFiles.length){clearInterval(showTimer);showTimer=null;setTimeout(closePhotoShow,1800);return}showPhoto()},2300)}function closePhotoShow(){clearInterval(showTimer);showTimer=null;photoModal.classList.remove('open')}$('showClose').addEventListener('click',closePhotoShow);photoModal.addEventListener('click',e=>{if(e.target===photoModal)closePhotoShow()});addEventListener('keydown',e=>{if(e.key==='Escape')closePhotoShow()});$('photoShow').addEventListener('click',startPhotoShow);
+$('open').addEventListener('click',()=>{if(Date.now()>=birthday){revealSurprise(true);return}if(Date.now()>=codeExpires){verifyCode();return}revealSurprise(false)});$('again').addEventListener('click',startPhotoShow);$('replay').addEventListener('click',()=>{typed=false;$('wishText').textContent='';$('signature').classList.remove('show');typeWish()});addEventListener('pointerdown',e=>{if(opened&&!e.target.closest('button'))launch(e.clientX,e.clientY)});
 })();
 </script>
-</body>
-</html>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a58f074c9fe8288d',t:'MTc5NDQxODI2NQ=='};var l=window.parent.location,o;try{o=new URL(l.origin).origin}catch(e){try{o=new URL(new URL(l.href).origin).origin}catch(e){o=''}}var u='/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a58f074c9fe8288d',a=document.createElement('script');a.src=o?new URL(u,o).href:u;document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
