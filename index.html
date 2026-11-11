@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#100d2a">
+<meta name="description" content="A little birthday surprise for Dr. Priyanka Kushwaha — peptide scientist, brilliant friend, and a genuinely lovely human.">
+<title>Happy Birthday, Priyanka! ✨</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--night:#100d2a;--plum:#241444;--pink:#ff78ad;--lilac:#c9b8ff;--gold:#ffd77a;--ice:#e9f5ff;--mint:#8ef0d2;--paper:#fffaf4}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{margin:0;min-height:100vh;color:var(--paper);font:400 16px/1.7 "DM Sans",sans-serif;background:radial-gradient(ellipse at 15% 12%,#4a276d 0,transparent 34%),radial-gradient(ellipse at 90% 55%,#34235e 0,transparent 38%),linear-gradient(145deg,#100d2a,#1c1036 58%,#24113c);overflow-x:hidden}
+body.lock{overflow:hidden}
+canvas{position:fixed;inset:0;width:100%;height:100%;pointer-events:none}
+#chem{z-index:0;opacity:.58}#fireworks{z-index:8}
+button{font:inherit}
+#gate{position:fixed;inset:0;z-index:10;display:grid;place-items:center;padding:24px;background:rgba(12,8,30,.82);backdrop-filter:blur(16px);text-align:center;transition:opacity .9s,visibility .9s}
+#gate.closed{opacity:0;visibility:hidden;pointer-events:none}
+.gate-inner{width:min(100%,620px);padding:clamp(26px,6vw,54px);border:1px solid #ffffff2b;border-radius:32px;background:linear-gradient(145deg,#ffffff12,#ffffff06);box-shadow:0 30px 100px #0005}
+.flask{width:100px;height:120px;filter:drop-shadow(0 0 24px #ff78ad66);margin-bottom:8px}
+.eyebrow{font:700 22px Caveat,cursive;color:var(--gold);margin:0 0 10px}
+h1,h2,p{margin-top:0}
+.gate-title{font:800 clamp(34px,7vw,58px)/1.05 "Playfair Display",serif;margin:0 auto 14px;max-width:520px}
+.gate-copy{color:#e7dff5;margin:0 auto 18px}
+.countdown{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px;max-width:440px;margin:22px auto 26px}
+.time-unit{padding:14px 5px 11px;border:1px solid #ffffff25;border-radius:17px;background:#ffffff0d}
+.time-unit b{display:block;font:700 clamp(25px,6vw,38px)/1 "DM Sans",sans-serif;color:var(--gold);font-variant-numeric:tabular-nums}
+.time-unit span{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#e7dff5}
+.primary{border:0;border-radius:100px;padding:15px 27px;color:#241334;background:linear-gradient(105deg,var(--gold),#ff9fc6 52%,var(--lilac));font-weight:700;font-size:17px;box-shadow:0 10px 34px #ff78ad45;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.primary:hover{transform:translateY(-3px);box-shadow:0 14px 40px #ff78ad70}
+.primary:focus-visible,.sound:focus-visible{outline:3px solid var(--mint);outline-offset:4px}
+.tiny-note{font-size:13px;color:#cfc3e6;margin:17px 0 0}
+main{position:relative;z-index:1;width:min(1120px,100% - 36px);margin:auto;padding-bottom:100px}
+.hero{min-height:92svh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:80px 0 55px}
+.welcome{font:700 clamp(23px,4vw,32px) Caveat,cursive;color:var(--gold);margin:0 0 12px}
+.hero h1{font:800 clamp(55px,13vw,132px)/.92 "Playfair Display",serif;letter-spacing:-.055em;margin:0;color:#fff8f3;text-shadow:0 8px 50px #ff78ad2b}
+.hero h1 span{display:block;background:linear-gradient(95deg,#fff1c8,#ff9ec5 48%,#cdbdff);background-clip:text;color:transparent}
+.hero-name{font:700 clamp(32px,7vw,58px) Caveat,cursive;color:var(--gold);margin:17px 0 5px}
+.hero-sub{max-width:620px;color:#e4d9f4;font-size:clamp(16px,2.5vw,19px);margin:8px auto 18px}
+.date-pill{border:1px solid #ffffff30;border-radius:99px;padding:8px 17px;color:#f5e9ff;background:#ffffff0c;font-size:14px}
+.scroll-cue{margin-top:35px;color:#d7c9eb;font-size:13px;letter-spacing:.08em}
+.section{margin:50px auto 0}
+.section-heading{text-align:center;font:700 clamp(29px,5vw,44px)/1.15 "Playfair Display",serif;margin:0 0 14px}
+.section-intro{text-align:center;max-width:650px;color:#d9cde9;margin:0 auto 28px}
+.panel{padding:clamp(23px,4vw,42px);border:1px solid #ffffff24;border-radius:28px;background:linear-gradient(145deg,#ffffff12,#ffffff07);box-shadow:0 22px 70px #09051c35;backdrop-filter:blur(8px)}
+.report-title{text-align:center;font:700 clamp(25px,4vw,34px) "Playfair Display",serif;margin:0 0 12px}
+.report-lede{text-align:center;color:#e5d9f2;max-width:690px;margin:0 auto 24px}
+.quality-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.quality{padding:17px 15px;border-radius:17px;background:#ffffff0b;border:1px solid #ffffff18}
+.quality b{display:block;color:var(--mint);font-size:14px;margin-bottom:4px}
+.quality span{font-size:14px;color:#f3eaf9}
+.peptide{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:7px;margin:22px auto 0}
+.peptide span{width:39px;height:39px;display:grid;place-items:center;border-radius:50%;color:#25163a;font-weight:700;box-shadow:0 5px 20px #0002}
+.peptide small{font-size:10px;color:#f3eaf9}
+.gallery{columns:3 230px;column-gap:18px}
+.photo{break-inside:avoid;margin:0 0 20px;padding:10px 10px 8px;background:var(--paper);border-radius:7px;box-shadow:0 18px 45px #0005;transform:rotate(var(--tilt));transition:transform .35s,box-shadow .35s;opacity:0}
+.photo.visible{animation:photo-in .75s cubic-bezier(.2,1.3,.4,1) forwards}
+.photo:hover{transform:rotate(0) translateY(-5px);box-shadow:0 22px 55px #0007}
+.photo img{display:block;width:100%;height:auto;max-height:480px;object-fit:cover;border-radius:3px;background:#eee}
+.photo figcaption{font:700 21px/1.15 Caveat,cursive;text-align:center;color:#35204e;padding:9px 3px 2px}
+@keyframes photo-in{from{opacity:0;transform:translateY(28px) rotate(calc(var(--tilt)*2)) scale(.94)}to{opacity:1;transform:rotate(var(--tilt)) scale(1)}}
+.wish-panel{max-width:850px;margin-inline:auto}
+.wish-kicker{font:700 24px Caveat,cursive;color:var(--gold);text-align:center;margin-bottom:6px}
+.wish-copy{font:600 clamp(20px,3vw,25px)/1.65 Caveat,cursive;white-space:pre-line;color:#fff5fc;min-height:270px;margin:0}
+.signature{margin-top:22px;text-align:right;opacity:0;transform:translateY(8px);transition:.7s}
+.signature.show{opacity:1;transform:none}
+.signature span{display:block;color:#e8d9f4;font:600 20px Caveat,cursive}
+.signature strong{font:700 54px Caveat,cursive;color:var(--gold)}
+.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:26px}
+.secondary{background:#ffffff12;color:#fff;border:1px solid #ffffff35;box-shadow:none}
+footer{text-align:center;color:#c9b9dc;font-size:13px;margin:52px auto 0}
+.sound{position:fixed;right:18px;bottom:18px;z-index:9;width:48px;height:48px;border-radius:50%;border:1px solid #ffffff40;background:#1c1238dd;color:white;font-size:20px;cursor:pointer;display:none;backdrop-filter:blur(10px)}
+.toast{position:fixed;z-index:9;inset:0;display:grid;place-items:center;text-align:center;padding:24px;font:800 clamp(34px,8vw,76px)/1.08 "Playfair Display",serif;color:var(--gold);text-shadow:0 0 35px #ff78ad;opacity:0;pointer-events:none;transform:scale(.7);transition:.7s}
+.toast.show{opacity:1;transform:scale(1)}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .8s,transform .8s}
+.reveal.visible{opacity:1;transform:none}
+@media(max-width:650px){main{width:min(100% - 26px,1120px)}.hero{min-height:86svh}.quality-grid{grid-template-columns:1fr 1fr}.gallery{columns:2 145px;column-gap:12px}.photo{margin-bottom:14px;padding:7px 7px 6px}.photo figcaption{font-size:18px}.panel{border-radius:22px}.countdown{gap:6px}.time-unit{padding:12px 3px 9px}}
+@media(max-width:380px){.quality-grid{grid-template-columns:1fr}.countdown{gap:5px}.time-unit span{font-size:9px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.photo{opacity:1}}
+</style>
+</head>
+<body class="lock">
+<canvas id="chem" aria-hidden="true"></canvas><canvas id="fireworks" aria-hidden="true"></canvas>
+<div id="gate">
+ <div class="gate-inner">
+  <svg class="flask" viewBox="0 0 100 120" role="img" aria-label="A bubbling chemistry flask">
+   <defs><clipPath id="flaskClip"><path d="M37 7h26v31l27 58q6 15-10 15H20q-16 0-10-15l27-58z"/></clipPath><linearGradient id="liquid" x2="0" y2="1"><stop stop-color="#ff8fba"/><stop offset="1" stop-color="#9275ff"/></linearGradient></defs>
+   <g clip-path="url(#flaskClip)"><path d="M5 69q20-10 45 0t45 0v52H5z" fill="url(#liquid)"/><g fill="#fff"><circle cx="35" cy="88" r="3"><animate attributeName="cy" values="88;48;88" dur="3s" repeatCount="indefinite"/></circle><circle cx="61" cy="96" r="2.5"><animate attributeName="cy" values="96;55;96" dur="2.4s" repeatCount="indefinite"/></circle></g></g>
+   <path d="M37 7h26v31l27 58q6 15-10 15H20q-16 0-10-15l27-58z" fill="none" stroke="#fff2ff" stroke-width="3" stroke-linejoin="round"/>
+  </svg>
+  <p class="eyebrow">A tiny lab-secret, prepared with extra love ✨</p>
+  <h1 class="gate-title" id="gateTitle">A birthday experiment is almost ready…</h1>
+  <p class="gate-copy" id="gateCopy">The countdown to Dr. Priyanka's special day:</p>
+  <div class="countdown" aria-label="Countdown to birthday">
+   <div class="time-unit"><b id="days">00</b><span>Days</span></div><div class="time-unit"><b id="hours">00</b><span>Hours</span></div><div class="time-unit"><b id="minutes">00</b><span>Minutes</span></div><div class="time-unit"><b id="seconds">00</b><span>Seconds</span></div>
+  </div>
+  <button class="primary" id="open">Open your surprise 🎁</button>
+  <p class="tiny-note">Sound is optional 🔊 · Tap anywhere after opening to send fireworks into the sky 🎆</p>
+ </div>
+</div>
+<main id="main">
+ <header class="hero">
+  <p class="welcome">A little celebration for a very special human</p>
+  <h1>Happy <span>Birthday</span></h1>
+  <p class="hero-name">Dr. Priyanka Kushwaha</p>
+  <p class="hero-sub">Peptide scientist by profession, sunshine by nature, and an all-round excellent human being. Today, the universe gets to celebrate you. 💜</p>
+  <span class="date-pill">12 November · Your day, your rules 🎂</span>
+  <p class="scroll-cue">A little more sparkle is waiting below ↓</p>
+ </header>
+ <section class="section panel reveal">
+  <h2 class="report-title">The Priyanka Appreciation Report 🧬</h2>
+  <p class="report-lede">After extensive (and completely peer-reviewed by me) observation, this is the official result of the world's most cheerful analysis.</p>
+  <div class="quality-grid">
+   <div class="quality"><b>Hardworking</b><span>Even deadlines need a break trying to keep up with you.</span></div>
+   <div class="quality"><b>Talented</b><span>Making complicated chemistry look like an everyday superpower.</span></div>
+   <div class="quality"><b>Humble</b><span>Big achievements, zero unnecessary attitude. Rare compound!</span></div>
+   <div class="quality"><b>Beautiful</b><span>That smile deserves its own journal impact factor.</span></div>
+   <div class="quality"><b>Adorably cute</b><span>Scientifically proven. No further experiments required.</span></div>
+   <div class="quality"><b>One of a kind</b><span>No known substitute. Definitely not commercially available.</span></div>
+  </div>
+  <div class="peptide" aria-label="A playful peptide sequence"><span style="background:#ffb0ce">P</span><span style="background:#ffd77a">R</span><span style="background:#b7c9ff">I</span><span style="background:#9be8d3">Y</span><span style="background:#e3b7ff">A</span><span style="background:#ffb0ce">N</span><span style="background:#ffd77a">K</span><span style="background:#b7c9ff">A</span></div>
+  <p style="text-align:center;color:#d8cbe9;font-size:13px;margin:12px 0 0">A tiny sequence-inspired tribute — not a real peptide sequence, just a scientist-approved birthday joke 😉</p>
+ </section>
+ <section class="section reveal">
+  <h2 class="section-heading">A little gallery of a lot of brilliance 📸</h2>
+  <p class="section-intro">Nine snapshots, countless reasons to smile. Each frame has earned its place in this very important birthday archive.</p>
+  <div class="gallery" id="gallery">
+   <figure class="photo" style="--tilt:-2deg"><img src="1stpic.png" alt="Priyanka smiling in a light outfit" loading="lazy"><figcaption>Certified cuteness, no lab required ✨</figcaption></figure>
+   <figure class="photo" style="--tilt:1.7deg"><img src="2nd.png" alt="Priyanka enjoying a train journey" loading="lazy"><figcaption>Main-character energy: fully activated 🚂</figcaption></figure>
+   <figure class="photo" style="--tilt:-1.3deg"><img src="3rd.png" alt="Priyanka standing by a chemistry blackboard" loading="lazy"><figcaption>When the scientist becomes the subject 🧪</figcaption></figure>
+   <figure class="photo" style="--tilt:2deg"><img src="4th.png" alt="Priyanka receiving an academic award" loading="lazy"><figcaption>Hard work looks good on you 🏅</figcaption></figure>
+   <figure class="photo" style="--tilt:-2.2deg"><img src="5th.png" alt="Priyanka holding her degree outdoors" loading="lazy"><figcaption>Achievement unlocked. Grace included 💫</figcaption></figure>
+   <figure class="photo" style="--tilt:1.4deg"><img src="6th.png" alt="Priyanka at an IIT Bombay convocation display" loading="lazy"><figcaption>A proud chapter, beautifully earned 🎓</figcaption></figure>
+   <figure class="photo" style="--tilt:-1.8deg"><img src="7th.png" alt="Priyanka in a blue saree" loading="lazy"><figcaption>Elegance with a capital E 💙</figcaption></figure>
+   <figure class="photo" style="--tilt:2.1deg"><img src="8th.png" alt="Priyanka taking a rest beside her laptop" loading="lazy"><figcaption>Even the brightest minds need a recharge 😴</figcaption></figure>
+   <figure class="photo" style="--tilt:-1.1deg"><img src="9th.png" alt="Priyanka smiling at her laptop" loading="lazy"><figcaption>Back to brilliance. As usual. 💻</figcaption></figure>
+  </div>
+ </section>
+ <section class="section panel wish-panel reveal" id="wish">
+  <p class="wish-kicker">One last note from your friend 💌</p>
+  <h2 class="section-heading">A wish, from the heart</h2>
+  <p class="wish-copy" id="wishText"></p>
+  <div class="signature" id="signature"><span>With lots of good wishes,</span><strong>Sahil</strong></div>
+  <div class="actions"><button class="primary" id="moreFireworks">One more round of fireworks! 🎆</button><button class="primary secondary" id="replay">Read the wish again ↻</button></div>
+ </section>
+ <footer>Made with friendship, a little chemistry, and a frankly unreasonable amount of glitter. 💜</footer>
+</main>
+<div class="toast" id="toast">Happy Birthday,<br>Dr. Priyanka! 🎂</div>
+<button class="sound" id="sound" aria-label="Turn music off" title="Music on or off">🔊</button>
+<script>
+(()=>{
+ const $=id=>document.getElementById(id);
+ const birthday=new Date('2026-11-12T00:00:00+05:30').getTime();
+ const pad=n=>String(n).padStart(2,'0');
+ let opened=false, audio=null, musicOn=false, musicTimer=null, wishStarted=false;
+ function countdown(){
+  const left=Math.max(0,birthday-Date.now()),sec=Math.floor(left/1000);
+  $('days').textContent=pad(Math.floor(sec/86400));
+  $('hours').textContent=pad(Math.floor(sec%86400/3600));
+  $('minutes').textContent=pad(Math.floor(sec%3600/60));
+  $('seconds').textContent=pad(sec%60);
+  if(left===0){$('gateTitle').textContent='The wait is over. It is your day! 🎂';$('gateCopy').textContent='Your birthday surprise is ready whenever you are.'}
+ }
+ countdown();setInterval(countdown,1000);
+ // Subtle drifting peptide-like bonds and molecular rings.
+ const chem=$('chem'),ctx=chem.getContext('2d');let cw=0,ch=0,molecules=[];
+ function resize(){const d=Math.min(devicePixelRatio||1,2);cw=innerWidth;ch=innerHeight;chem.width=cw*d;chem.height=ch*d;chem.style.width=cw+'px';chem.style.height=ch+'px';ctx.setTransform(d,0,0,d,0,0);molecules=Array.from({length:13},()=>({x:Math.random()*cw,y:Math.random()*ch,r:18+Math.random()*25,a:Math.random()*6.28,v:(Math.random()-.5)*.003,dx:(Math.random()-.5)*.18,dy:(Math.random()-.5)*.12,type:Math.random()>.5?0:1}))}
+  addEventListener('resize',resize);resize();
+ function moleculeFrame(){ctx.clearRect(0,0,cw,ch);molecules.forEach(m=>{m.x+=m.dx;m.y+=m.dy;m.a+=m.v;if(m.x<-60)m.x=cw+60;if(m.x>cw+60)m.x=-60;if(m.y<-60)m.y=ch+60;if(m.y>ch+60)m.y=-60;ctx.save();ctx.translate(m.x,m.y);ctx.rotate(m.a);ctx.strokeStyle='rgba(201,184,255,.35)';ctx.lineWidth=1.3;ctx.beginPath();for(let i=0;i<6;i++){const a=i*Math.PI/3;const x=Math.cos(a)*m.r,y=Math.sin(a)*m.r;i?ctx.lineTo(x,y):ctx.moveTo(x,y)}ctx.closePath();ctx.stroke();for(let i=0;i<6;i++){const a=i*Math.PI/3;ctx.beginPath();ctx.fillStyle=['#ff9fc6','#8ef0d2','#ffd77a'][i%3];ctx.shadowColor=ctx.fillStyle;ctx.shadowBlur=10;ctx.arc(Math.cos(a)*m.r,Math.sin(a)*m.r,3.2,0,Math.PI*2);ctx.fill()}ctx.restore()});requestAnimationFrame(moleculeFrame)}
+ moleculeFrame();
+ // Firework rockets and particle bursts.
+ const fx=$('fireworks'),f=fx.getContext('2d');let fw=0,fh=0,dpr=1,rockets=[],sparks=[];
+ function sizeFx(){dpr=Math.min(devicePixelRatio||1,2);fw=innerWidth;fh=innerHeight;fx.width=fw*dpr;fx.height=fh*dpr;fx.style.width=fw+'px';fx.style.height=fh+'px';f.setTransform(dpr,0,0,dpr,0,0)}
+ addEventListener('resize',sizeFx);sizeFx();
+ const rand=(a,b)=>a+Math.random()*(b-a);
+ function launch(x,y){x=x??rand(fw*.12,fw*.88);y=y??rand(fh*.12,fh*.48);const sx=x+rand(-fw*.18,fw*.18);const frames=rand(38,58);rockets.push({x:sx,y:fh+10,vx:(x-sx)/frames,vy:(y-fh)/frames,frames,age:0})}
+ function burst(x,y){const hue=rand(0,360),count=rand(65,105);for(let i=0;i<count;i++){const a=Math.PI*2*i/count,s=rand(1.1,5.4);sparks.push({x,y,vx:Math.cos(a)*s,vy:Math.sin(a)*s,life:0,max:rand(48,85),color:'hsl('+rand(hue-35,hue+55)+' 100% '+rand(62,78)+'%)',size:rand(1.2,2.5)})}}
+ function fireFrame(){f.globalCompositeOperation='destination-out';f.fillStyle='rgba(10,7,28,.2)';f.fillRect(0,0,fw,fh);f.globalCompositeOperation='lighter';for(let i=rockets.length-1;i>=0;i--){const r=rockets[i];r.x+=r.vx;r.y+=r.vy;if(++r.age>=r.frames){burst(r.x,r.y);rockets.splice(i,1)}else{f.fillStyle='#fff0c9';f.fillRect(r.x,r.y,2,5)}}for(let i=sparks.length-1;i>=0;i--){const p=sparks[i];p.x+=p.vx;p.y+=p.vy;p.vx*=.985;p.vy=p.vy*.985+.045;p.life++;if(p.life>p.max){sparks.splice(i,1);continue}f.globalAlpha=1-p.life/p.max;f.fillStyle=p.color;f.beginPath();f.arc(p.x,p.y,p.size,0,Math.PI*2);f.fill()}f.globalAlpha=1;requestAnimationFrame(fireFrame)}
+ fireFrame();
+ function celebrate(n=12){for(let i=0;i<n;i++)setTimeout(()=>launch(),i*170)}
+ // Original, browser-synthesized birthday melody; starts only after the visitor taps.
+ function startMusic(){try{const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return;audio=audio||new AC();audio.resume();musicOn=true;$('sound').textContent='🔊';$('sound').style.display='block';const notes=[392,392,440,392,523.25,493.88,392,392,440,392,587.33,523.25,392,392,783.99,659.25,523.25,493.88,440,698.46,698.46,659.25,523.25,587.33,523.25];let idx=0;const play=()=>{if(!musicOn||!audio)return;const now=audio.currentTime;const osc=audio.createOscillator(),gain=audio.createGain();osc.type='triangle';osc.frequency.value=notes[idx++%notes.length];gain.gain.setValueAtTime(.0001,now);gain.gain.exponentialRampToValueAtTime(.12,now+.025);gain.gain.exponentialRampToValueAtTime(.0001,now+.48);osc.connect(gain);gain.connect(audio.destination);osc.start(now);osc.stop(now+.5)};if(musicTimer)clearInterval(musicTimer);play();musicTimer=setInterval(play,440)}catch(e){console.info('Audio is unavailable in this browser.')}}
+ function stopMusic(){musicOn=false;if(musicTimer)clearInterval(musicTimer);if(audio)audio.suspend();$('sound').textContent='🔇'}
+ $('sound').addEventListener('click',()=>musicOn?stopMusic():startMusic());
+ const wish=`Priyanka,
+
+Happy Birthday! 💜
+
+Aaj ke din tumhare liye bas ek hi instruction hai: laptop thoda side mein, cake thoda saamne, aur smile full brightness par! Lab ke experiments, research papers aur deadlines ko aaj officially chhutti milni chahiye. 🧪
+
+You are genuinely one of the most hardworking and talented people I know. The way you keep learning, keep growing and still stay so humble is honestly inspiring. Aur haan, beautiful toh ho hi — lekin tumhari kindness aur that lovely smile make you even more special. Itni saari qualities ek hi person mein? Thoda unfair advantage hai, Dr. Priyanka! 😄
+
+I hope this new year brings you exciting discoveries, wonderful opportunities, good health, peaceful days, papers accepted without endless revisions, experiments that work on the first try, and countless reasons to feel proud of yourself.
+
+Keep shining, keep being your wonderful self, and never forget to celebrate how far you have come. You deserve all the happiness, success and little surprises life can offer.
+
+Have the happiest birthday. And please, aaj cake ke calories ka koi analysis mat karna — that's a problem for tomorrow. 🎂✨`;
+ function typeWish(){if(wishStarted)return;wishStarted=true;const el=$('wishText');let i=0;function step(){el.textContent=wish.slice(0,i++);if(i<=wish.length)setTimeout(step,wish[i-1]==='\n'?180:17);else $('signature').classList.add('show')}step()}
+ const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');if(entry.target.id==='wish')typeWish();observer.unobserve(entry.target)}}),{threshold:.14});
+ document.querySelectorAll('.reveal,.photo').forEach(el=>observer.observe(el));
+ $('open').addEventListener('click',()=>{if(opened)return;opened=true;document.body.classList.remove('lock');$('gate').classList.add('closed');startMusic();celebrate(18);setTimeout(()=>$('toast').classList.add('show'),450);setTimeout(()=>$('toast').classList.remove('show'),3600);setInterval(()=>{if(!document.hidden&&opened)launch()},2800);});
+ $('moreFireworks').addEventListener('click',()=>celebrate(20));
+ $('replay').addEventListener('click',()=>{wishStarted=false;$('wishText').textContent='';$('signature').classList.remove('show');typeWish();celebrate(4)});
+ addEventListener('pointerdown',e=>{if(opened&&!e.target.closest('button'))launch(e.clientX,e.clientY)});
+})();
+</script>
+</body>
+</html>
